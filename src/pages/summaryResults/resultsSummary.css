@@ -1,0 +1,72 @@
+:root {
+  --red: hsl(0.1%, 67%);
+  --yellow: hsl(39, 100%, 56%);
+  --teal: hsl(166, 100%, 37%);
+  --blue: hsl(234, 85%, 45%);
+  --gradient1A: hsl(252, 100%, 67%);
+  --gradient1B: hsl(241, 81%, 54%);
+  --gradient2A: hsla(256, 72%, 46%, 1);
+  --gradient2B: hsla(241, 72%, 46%, 0);
+  --white: hsl(0, 0%, 100%);
+  --paleBlue: hsl(221, 100%, 96%);
+  --lightLavender: hsl(241, 100%, 89%);
+  --darkGrayBlue: hsl(224, 30%, 27%);
+}
+
+* {
+  font-family: "Hanken Grotesk";
+}
+
+button {
+  all: revert;
+  border: 0;
+  border-radius: 1rem;
+  background: var(--darkGrayBlue);
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0.25rem;
+  padding: 0.5rem 2rem;
+  line-height: 1.2;
+  font-family: "Hanken Grotesk";
+}
+
+button:hover {
+  background-image: linear-gradient(var(--gradient1A), var(--gradient1B));
+}
+
+button:focus {
+  outline: 0; /* Removes the default blue ring */
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px red;
+}
+
+button:active {
+}
+
+.score {
+  display: flex;
+}
+
+.circle {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  padding: 1rem;
+  background-image: linear-gradient(var(--gradient2A), var(--gradient2B));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(var(--gradient1A), var(--gradient1B));
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+}
+
+.big-text {
+  font-size: 3.5rem;
+}
