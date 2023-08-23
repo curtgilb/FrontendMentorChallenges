@@ -1,8 +1,12 @@
 :root {
-  --red: hsl(0.1%, 67%);
+  --red: hsl(0, 100%, 67%);
+  --red-light: hsla(0, 100%, 67%, 50%);
   --yellow: hsl(39, 100%, 56%);
+  --yellow-light: hsla(39, 100%, 56%, 50%);
   --teal: hsl(166, 100%, 37%);
+  --teal-light: hsla(166, 100%, 37%, 50%);
   --blue: hsl(234, 85%, 45%);
+  --blue-light: hsla(234, 85%, 45%, 50%);
   --gradient1A: hsl(252, 100%, 67%);
   --gradient1B: hsl(241, 81%, 54%);
   --gradient2A: hsla(256, 72%, 46%, 1);
@@ -15,6 +19,12 @@
 
 * {
   font-family: "Hanken Grotesk";
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: local("Hanken Grotesk"),
+    url(../assets/HankenGrotesk-VariableFont_wght.ttf) format("truetype");
 }
 
 button {
@@ -43,10 +53,6 @@ button:focus {
 button:active {
 }
 
-.score {
-  display: flex;
-}
-
 .circle {
   width: 8rem;
   height: 8rem;
@@ -61,12 +67,37 @@ button:active {
 .summary {
   display: flex;
   flex-direction: column;
+  color: var(--white);
   align-items: center;
   background-image: linear-gradient(var(--gradient1A), var(--gradient1B));
   border-radius: 1.5rem;
   padding: 1.5rem;
+  width: 15rem;
+  height: 20rem;
 }
 
 .big-text {
   font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.score {
+  display: flex;
+  box-shadow: 3px 3px 20px var(--darkGrayBlue);
+  border-radius: 1.5rem;
+  width: 50rem;
+}
+
+.breakdown {
+  padding: 1.6rem;
+}
+
+.SectionResult {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-title {
+  font-size: x-large;
+  font-weight: 600;
 }

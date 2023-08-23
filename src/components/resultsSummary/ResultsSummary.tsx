@@ -1,31 +1,9 @@
+import "@styles/ResultsSummary.css";
+import { SectionResult } from "./SectionResult";
 import Button from "./Button";
-// import data from "./data.json";
-import SectionResult from "./SectionResult";
-import "./resultsSummary.css";
+import data from "./data.json";
 
-export default function Summary() {
-  const data = [
-    {
-      category: "Reaction",
-      score: 80,
-      icon: "/images/icon-reaction.svg",
-    },
-    {
-      category: "Memory",
-      score: 92,
-      icon: "/images/icon-memory.svg",
-    },
-    {
-      category: "Verbal",
-      score: 61,
-      icon: "/images/icon-verbal.svg",
-    },
-    {
-      category: "Visual",
-      score: 72,
-      icon: "/images/icon-visual.svg",
-    },
-  ];
+export function ResultsSummary() {
   return (
     <>
       <div className="score">
@@ -42,16 +20,17 @@ export default function Summary() {
         </div>
 
         <div className="breakdown">
-          <p>Summary</p>
+          <p className="card-title">Summary</p>
           {data.map((item, index) => {
             console.log(item);
             console.log(index);
             return (
               <SectionResult
-                key={index}
+                index={index}
                 icon={item.icon}
                 name={item.category}
                 score={item.score}
+                color={item.color}
               ></SectionResult>
             );
           })}
